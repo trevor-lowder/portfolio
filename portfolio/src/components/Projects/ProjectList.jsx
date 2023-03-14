@@ -12,7 +12,9 @@ const ProjectList = () => {
       }}
     >
       {projects.map((project) => (
-        <div key={project}>{project}</div>
+        <div key={project} style={{ marginTop: 24 }}>
+          {project}
+        </div>
       ))}
     </div>
   );
