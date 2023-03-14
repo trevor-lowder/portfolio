@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import ProjectList from "./ProjectList";
 
 const Projects = () => {
   return (
-    <div>Projects</div>
-  )
-}
+    <div>
+      <ProjectList />
+    </div>
+  );
+};
 
-export default Projects
+export default Projects;

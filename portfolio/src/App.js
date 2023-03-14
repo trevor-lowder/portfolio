@@ -1,21 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import Home from './components/Home/Home.jsx'
-import About from './components/About/About.jsx'
-import Projects from './components/Projects/Projects.jsx'
-import Contact from './components/Contact/Contact.jsx'
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import "./App.css";
+import Home from "./components/Home/Home.jsx";
+import About from "./components/About/About.jsx";
+import Projects from "./components/Projects/Projects.jsx";
+import Contact from "./components/Contact/Contact.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Home/>
-        <About/>
-        <Projects/>
-        <Contact/>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
