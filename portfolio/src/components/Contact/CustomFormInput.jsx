@@ -53,7 +53,6 @@ const CustomFormInput = ({
         required={required}
         onChange={onChange}
         value={value}
-        error={error}
         InputProps={{
           startAdornment: startAdornment && (
             <Box sx={{ marginRight: 2 }}>

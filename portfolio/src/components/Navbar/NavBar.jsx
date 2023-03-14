@@ -20,7 +20,7 @@ function ResponsiveAppBar() {
             component={NavLink}
             to="/"
             sx={{
-              mr: 20,
+              mr: 14,
               display: { xs: "none", md: "flex" },
               fontFamily: "Consolas",
               fontWeight: 700,
