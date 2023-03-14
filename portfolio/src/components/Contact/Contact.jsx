@@ -9,7 +9,7 @@ const Contact = () => {
       <div>
         <NavBar />
       </div>
-      <Box sx={{ display: "flex", justifyContent: "center", mt: 36 }}>
+      <Box sx={{ display: "flex", justifyContent: "center", mt:18}}>
         <ContactForm />
       </Box>
     </>

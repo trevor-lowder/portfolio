@@ -38,7 +38,7 @@ function ResponsiveAppBar() {
                 key={page}
                 component={NavLink}
                 to={`/${page}`}
-                exact
+                exact="true"
                 sx={{
                   my: 2,
                   mx: 2,
