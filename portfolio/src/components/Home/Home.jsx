@@ -1,11 +1,12 @@
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import React from "react";
 import NavBar from "../Navbar/NavBar";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
 const url = "https://api.github.com/users/TSRei";
-
+const resume =
+  "https://drive.google.com/uc?export=download&id=1Q7pQNnffuwLgeZGKdgEq7x4SxcnEb5w8";
 const Home = () => {
   const [avatarUrl, setAvatarUrl] = useState("");
   const [bio, setBio] = useState("");
@@ -37,6 +38,9 @@ const Home = () => {
           alt=""
         />
         <p>{bio}</p>
+        <Button href={resume} sx={{ fontSize: "22px" }}>
+          Download Resume
+        </Button>
       </Box>
     </>
   );

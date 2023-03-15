@@ -1,6 +1,22 @@
 import React from "react";
+import { Box } from "@mui/material";
+import ActionAreaCard from "./ProjectCard";
 
-const projects = ["project1", "project2", "project3"];
+const projects = [
+  {
+    title: "Project 1",
+    description: "Description for Project 1",
+    image: "/static/images/cards/contemplative-reptile.jpg",
+    githubLink: "https://github.com/user/project-1",
+  },
+  {
+    title: "Project 2",
+    description: "Description for Project 2",
+    image: "/static/images/cards/contemplative-reptile.jpg",
+    githubLink: "https://github.com/user/project-2",
+  },
+  // more projects...
+];
 
 const ProjectList = () => {
   return (
@@ -12,9 +28,9 @@ const ProjectList = () => {
       }}
     >
       {projects.map((project) => (
-        <div key={project} style={{ marginTop: 24 }}>
-          {project}
-        </div>
+        <Box sx={{ my: 4 }}>
+          <ActionAreaCard key={project.title} project={project} />
+        </Box>
       ))}
     </div>
   );
