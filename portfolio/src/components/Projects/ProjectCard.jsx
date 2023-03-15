@@ -10,7 +10,13 @@ const ActionAreaCard = ({ project }) => {
   const { title, description, image, githubLink } = project;
 
   return (
-    <Card sx={{ maxWidth: 500 }}>
+    <Card
+      sx={{
+        maxWidth: 500,
+        backgroundColor: "black",
+        "&:hover": { transform: "scale(1.2)" },
+      }}
+    >
       <CardActionArea href={githubLink} target="_blank">
         <CardMedia
           component="img"

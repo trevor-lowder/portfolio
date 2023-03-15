@@ -4,7 +4,7 @@ import NavBar from "../Navbar/NavBar";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const url = "https://api.github.com/users/TSRei";
+const url = "https://api.github.com/users/trevor-lowder";
 const resume =
   "https://drive.google.com/uc?export=download&id=1Q7pQNnffuwLgeZGKdgEq7x4SxcnEb5w8";
 const Home = () => {
@@ -38,7 +38,10 @@ const Home = () => {
           alt=""
         />
         <p>{bio}</p>
-        <Button href={resume} sx={{ fontSize: "22px" }}>
+        <Button
+          href={resume}
+          sx={{ fontSize: "22px", "&:hover": { transform: "scale(1.25)" } }}
+        >
           Download Resume
         </Button>
       </Box>
