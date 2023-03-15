@@ -55,7 +55,7 @@ const ContactForm = () => {
     <>
       <form onSubmit={handleSubmit}>
         <CustomFormInput
-          label="Name"
+          label="Name (First, Last)"
           id="name"
           variant="outlined"
           name="name"

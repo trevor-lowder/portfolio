@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@mui/material";
-import ActionAreaCard from "./ProjectCard";
+import ProjectCard from "./ProjectCard";
 
 const projects = [
   {
@@ -29,7 +29,7 @@ const ProjectList = () => {
     >
       {projects.map((project) => (
         <Box sx={{ my: 4 }}>
-          <ActionAreaCard key={project.title} project={project} />
+          <ProjectCard key={project.title} project={project} />
         </Box>
       ))}
     </div>

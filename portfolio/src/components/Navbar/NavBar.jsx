@@ -32,7 +32,7 @@ function ResponsiveAppBar() {
           >
             TREVOR L
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 1, display: "flex" }}>
             {pages.map((page) => (
               <Button
                 key={page}
@@ -46,7 +46,7 @@ function ResponsiveAppBar() {
                   fontFamily: "Consolas",
                   color: "rgb(30, 233, 121)",
                   display: "block",
-                  "&:hover": { transform: "scale(1.5)"},
+                  "&:hover": { transform: "scale(1.5)" },
                 }}
               >
                 {page}

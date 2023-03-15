@@ -20,11 +20,11 @@ const About = () => {
       <NavBar />
       <Box className="crawl-container">
         <div className="crawl-text">
-          {Object.entries(story).map(([key, value]) => (
+          {Object.entries(story).map(([title, text]) => (
             <>
-              <div key={key}>
-                <h3>{key}</h3>
-                <p>{value}</p>
+              <div key={title}>
+                <h3>{title}</h3>
+                <p>{text}</p>
               </div>
             </>
           ))}
