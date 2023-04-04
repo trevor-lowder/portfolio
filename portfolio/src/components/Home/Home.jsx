@@ -1,6 +1,5 @@
 import { Box, Button } from "@mui/material";
 import React from "react";
-import NavBar from "../Navbar/NavBar";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -18,9 +17,6 @@ const Home = () => {
   });
   return (
     <>
-      <div>
-        <NavBar />
-      </div>
       <Box
         sx={{
           display: "flex",
@@ -28,19 +24,19 @@ const Home = () => {
           justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
-          mt: 16,
+          mt: 12,
           mx: 10,
         }}
       >
         <img
           src={avatarUrl}
-          style={{ height: "360px", width: "360px" }}
-          alt=""
+          style={{ height: "250px", width: "250px", borderRadius:"50%" }}
+          alt="profile-img"
         />
         <p>{bio}</p>
         <Button
           href={resume}
-          sx={{ fontSize: "22px", "&:hover": { transform: "scale(1.25)" } }}
+          sx={{ fontSize: "20px", "&:hover": { transform: "scale(1.25)" } }}
         >
           Download Resume
         </Button>

@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../Navbar/NavBar";
 import "./About.css";
 import { Box } from "@mui/material";
 
@@ -17,7 +16,6 @@ const story = {
 const About = () => {
   return (
     <>
-      <NavBar />
       <Box className="crawl-container">
         <div className="crawl-text">
           {Object.entries(story).map(([title, text]) => (
