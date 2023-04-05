@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 import { Box } from "@mui/material";
+import Scroll from "../Navbar/Scroll";
 
 const story = {
   "Growing Up":
@@ -18,6 +19,7 @@ const About = () => {
     <>
       <Box className="crawl-container">
         <div className="crawl-text">
+          <Scroll />
           {Object.entries(story).map(([title, text]) => (
             <>
               <div key={title}>
@@ -26,7 +28,7 @@ const About = () => {
               </div>
             </>
           ))}
-          <Box sx={{ mt: 40 }}>
+          <Box sx={{ my: 20 }}>
             <h1>Thanks For Reading!</h1>
           </Box>
         </div>

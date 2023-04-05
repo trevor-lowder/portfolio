@@ -2,7 +2,7 @@ import { Box, Button } from "@mui/material";
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-
+import DownloadIcon from '@mui/icons-material/Download';
 const url = "https://api.github.com/users/trevor-lowder";
 const resume =
   "https://drive.google.com/uc?export=download&id=1Q7pQNnffuwLgeZGKdgEq7x4SxcnEb5w8";
@@ -38,7 +38,7 @@ const Home = () => {
           href={resume}
           sx={{ fontSize: "20px", "&:hover": { transform: "scale(1.25)" } }}
         >
-          Download Resume
+          <DownloadIcon sx={{mr:1}}/>Resume 
         </Button>
       </Box>
     </>
