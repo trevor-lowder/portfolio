@@ -1,5 +1,4 @@
 import React from "react";
-import "./About.css";
 import { Box } from "@mui/material";
 import Scroll from "../Navbar/Scroll";
 
@@ -17,8 +16,30 @@ const story = {
 const About = () => {
   return (
     <>
-      <Box className="crawl-container">
-        <div className="crawl-text">
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "relative",
+          margin:"auto",
+          /* height: " calc(100vh - 64px)", */
+          width: "85%",
+        }}
+      >
+        <div
+          style={{
+            bottom: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            padding: "50px 0",
+            textAlign: "center",
+            color: "rgb(30,233,121)",
+            fontSize: "28px",
+            lineHeight: 1.3,
+          }}
+        >
           <Scroll />
           {Object.entries(story).map(([title, text]) => (
             <>
@@ -28,7 +49,7 @@ const About = () => {
               </div>
             </>
           ))}
-          <Box sx={{ my: 20 }}>
+          <Box sx={{my: "150px"}}>
             <h1>Thanks For Reading!</h1>
           </Box>
         </div>
