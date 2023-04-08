@@ -28,9 +28,11 @@ const ContactForm = () => {
     message: "",
   });
   const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState(false);
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormState((prevState) => ({ ...prevState, [name]: value }));
+    setTouched((prevState) => ({ ...prevState, [name]: true }));
   };
   const [isSubmitting, setSubmitting] = useState(false);
   const handleSubmit = (event) => {
@@ -39,8 +41,28 @@ const ContactForm = () => {
     validationSchema
       .validate(formState, { abortEarly: false })
       .then(() => {
-        console.log(formState);
-        // TODO: handle form submission})
+        fetch("https://formspree.io/f/xayzlnkv", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formState),
+        })
+          .then(() => {
+            alert(
+              "Thanks for your message! I will respond as soon as possible"
+            );
+            setFormState({
+              name: "",
+              email: "",
+              phone: "",
+              message: "",
+            });
+          })
+          .catch((error) => {
+            alert("There was an issue sending your message. Please try again");
+            console.log(error);
+          });
       })
       .catch((validationErrors) => {
         const errors = {};
@@ -62,7 +84,7 @@ const ContactForm = () => {
           startAdornment={faUser}
           value={formState.name}
           onChange={handleChange}
-          error={errors.name}
+          error={touched.name && errors.name}
           helperText="Enter your name"
         />
         <CustomFormInput
@@ -74,7 +96,7 @@ const ContactForm = () => {
           startAdornment={faEnvelope}
           value={formState.email}
           onChange={handleChange}
-          error={errors.email}
+          error={touched.email && errors.email}
         />
         <CustomFormInput
           label="Phone"
@@ -85,7 +107,7 @@ const ContactForm = () => {
           startAdornment={faPhone}
           value={formState.phone}
           onChange={handleChange}
-          error={errors.phone}
+          error={touched.phone && errors.phone}
         />
         <CustomFormInput
           label="Message"
@@ -97,23 +119,23 @@ const ContactForm = () => {
           startAdornment={faMessage}
           value={formState.message}
           onChange={handleChange}
-          error={errors.message}
+          error={touched.message && errors.message}
         />
         <Button
           type="submit"
-          variant="outlined"
+          variant="contained"
           disabled={isSubmitting}
           fullWidth
           startIcon={
-            <FontAwesomeIcon icon={faPaperPlane} color="rgb(30,233,121)" />
+            <FontAwesomeIcon icon={faPaperPlane} color="#0e1013" />
           }
           sx={{
             mt: 2,
-            color: "rgb(30,233,121)",
-            borderColor: "rgb(30,233,121)",
+            color: "#0e1013",
+            backgroundColor:"rgb(30,233,121)"
           }}
         >
-          SUBMIT
+          <div style={{marginLeft: 10, fontSize:'18px'}}>SUBMIT</div>
         </Button>
       </form>
     </>
