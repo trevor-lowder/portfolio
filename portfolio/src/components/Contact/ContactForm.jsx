@@ -132,7 +132,7 @@ const ContactForm = () => {
           sx={{
             mt: 2,
             color: "#0e1013",
-            backgroundColor:"rgb(30,233,121)"
+            backgroundColor:"secondary"
           }}
         >
           <div style={{marginLeft: 10, fontSize:'18px'}}>SUBMIT</div>
