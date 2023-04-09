@@ -12,7 +12,7 @@ const projects = [
       "A CRUD app made with Java Spring that mimicks Twitter functionality with Users, Tweets, and Hashtags",
     image: twitterApi,
     githubLink:
-      "https://github.com/fasttrackd-student-work/spring-assessment-social-media-sprint-2-2023-team-2",
+      "https://github.com/trevor-lowder/twitter-api",
   },
   {
     title: "Markdown Previewer",
@@ -27,7 +27,6 @@ const projects = [
     image: quoteMachineImage,
     githubLink: "https://trevor-lowder.github.io/Random-Quote-Machine/",
   },
-  // more projects...
 ];
 
 const ProjectList = () => {
