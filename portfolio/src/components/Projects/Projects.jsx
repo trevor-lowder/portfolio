@@ -10,7 +10,7 @@ const Projects = () => {
       <Box sx={{ display: "flex", justifyContent: "center", flexDirection:"column", alignItems:"center" }}>
         <Typography sx={{margin:"30px"}}>
           <h2>
-            Click to see the repo/live site for my recent projects
+            Click on a project card to see the repo/live site
           </h2>
         </Typography>
         <ProjectList />
