@@ -1,4 +1,4 @@
-# portfolio
+# Portfolio
 Portfolio website where you can send a message, view recent projects, and download my resume
 
 ## About
