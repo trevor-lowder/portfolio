@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import DownloadIcon from '@mui/icons-material/Download';
 const url = "https://api.github.com/users/trevor-lowder";
 const resume =
-  "https://drive.google.com/uc?export=download&id=1cKHWjnLS99qJtghTOre5Xd1N9HpvBBcasDvOzObhgfE";
+  "https://docs.google.com/document/d/1cKHWjnLS99qJtghTOre5Xd1N9HpvBBcasDvOzObhgfE/edit?usp=sharing";
 const Home = () => {
   const [avatarUrl, setAvatarUrl] = useState("");
   const [bio, setBio] = useState("");
