@@ -1,0 +1,60 @@
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #2196f3;
+}
+
+button {
+  margin: 10px;
+}
+
+.card-content {
+  background-color: #424242;
+}
+
+.iconImage {
+  margin: 10px; /* add spacing */
+  transition: transform 0.2s; /* add transition effect */
+}
+
+.iconImage:hover {
+  transform: scale(1.1); /* increase size on hover */
+  animation: bounce 1s infinite; /* add bounce effect */
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.slideInLeft {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slideInRight {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slideInLeft-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.slideInLeft-enter-active {
+  transition: opacity 500ms, transform 500ms;
+}
+
+.slideInRight-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.slideInRight-enter-active {
+  transition: opacity 500ms, transform 500ms;
+}

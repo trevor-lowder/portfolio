@@ -1,22 +1,26 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Home from "./components/Home/Home.jsx";
-import About from "./components/About/About.jsx";
-import Projects from "./components/Projects/Projects.jsx";
-import Contact from "./components/Contact/Contact.jsx";
-import NavBar from "./components/Navbar/NavBar.jsx";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { CssBaseline } from "@mui/material";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import "./App.css";
+import Contact from "./components/Contact";
 
-function App() {
+const App = () => {
   return (
-    <BrowserRouter>
-      <NavBar/>
+    <Router>
+      <CssBaseline />
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/" exact Component={Home} />
+        <Route path="/about" Component={About} />
+        <Route path="/projects" Component={Projects} />
+        <Route path="/contact" Component={Contact} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
-}
+};
 
 export default App;
